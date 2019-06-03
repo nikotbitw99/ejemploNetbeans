@@ -58,11 +58,14 @@
                       <Component id="RB_1" pref="197" max="32767" attributes="0"/>
                       <Component id="RB_2" max="32767" attributes="0"/>
                       <Component id="RB_3" alignment="0" max="32767" attributes="0"/>
+                      <Component id="RB_4" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btn_aceptar" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btn_aceptar" max="32767" attributes="0"/>
+                              <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
-                      <Component id="RB_4" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -81,7 +84,9 @@
                   <Component id="RB_4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                   <Component id="btn_aceptar" min="-2" pref="35" max="-2" attributes="0"/>
-                  <EmptySpace pref="198" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jPanel2" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -115,6 +120,100 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_aceptarActionPerformed"/>
           </Events>
         </Component>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                <BevelBorder/>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="RB_potencia" min="-2" max="-2" attributes="0"/>
+                          <Component id="RB_multiplicar" min="-2" max="-2" attributes="0"/>
+                          <Component id="RB_resta" min="-2" max="-2" attributes="0"/>
+                          <Component id="num1" max="32767" attributes="0"/>
+                          <Component id="num2" max="32767" attributes="0"/>
+                          <Component id="RB_sumar" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="RB_dividir" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ntn_calcular" alignment="0" pref="153" max="32767" attributes="0"/>
+                          <Component id="resultado" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="num1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="num2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="RB_sumar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="RB_resta" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="RB_multiplicar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="RB_dividir" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="RB_potencia" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="ntn_calcular" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="resultado" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="num1">
+            </Component>
+            <Component class="javax.swing.JTextField" name="num2">
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="RB_sumar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sumar"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="RB_resta">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Restar"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="RB_multiplicar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Multiplicar"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="RB_dividir">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="dividir"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="RB_potencia">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="potencia"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="ntn_calcular">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="calcular"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="resultado">
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

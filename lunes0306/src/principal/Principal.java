@@ -11,6 +11,7 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
         configurarRB();
+        botones_RB();
     }
     
     public void configurarRB(){
@@ -23,6 +24,22 @@ public class Principal extends javax.swing.JFrame {
         mensajes.add(RB_4);
         
         RB_1.setSelected(true);
+        
+        
+    }
+    
+    public void botones_RB(){
+            ButtonGroup botones = new ButtonGroup();
+            
+            botones.add(RB_sumar);
+            botones.add(RB_resta);
+            botones.add(RB_multiplicar);
+            botones.add(RB_dividir);
+            botones.add(RB_potencia);
+            
+            
+            
+        
         
         
     }
@@ -45,6 +62,16 @@ public class Principal extends javax.swing.JFrame {
         RB_3 = new javax.swing.JRadioButton();
         RB_4 = new javax.swing.JRadioButton();
         btn_aceptar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        num1 = new javax.swing.JTextField();
+        num2 = new javax.swing.JTextField();
+        RB_sumar = new javax.swing.JRadioButton();
+        RB_resta = new javax.swing.JRadioButton();
+        RB_multiplicar = new javax.swing.JRadioButton();
+        RB_dividir = new javax.swing.JRadioButton();
+        RB_potencia = new javax.swing.JRadioButton();
+        ntn_calcular = new javax.swing.JButton();
+        resultado = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,6 +92,62 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        RB_sumar.setText("Sumar");
+
+        RB_resta.setText("Restar");
+
+        RB_multiplicar.setText("Multiplicar");
+
+        RB_dividir.setText("dividir");
+
+        RB_potencia.setText("potencia");
+
+        ntn_calcular.setText("calcular");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(RB_potencia)
+                    .addComponent(RB_multiplicar)
+                    .addComponent(RB_resta)
+                    .addComponent(num1)
+                    .addComponent(num2)
+                    .addComponent(RB_sumar)
+                    .addComponent(RB_dividir)
+                    .addComponent(ntn_calcular, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                    .addComponent(resultado))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(RB_sumar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(RB_resta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(RB_multiplicar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(RB_dividir)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(RB_potencia)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ntn_calcular)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -74,10 +157,12 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(RB_1, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
                     .addComponent(RB_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RB_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RB_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btn_aceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(RB_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_aceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -93,7 +178,9 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(RB_4)
                 .addGap(48, 48, 48)
                 .addComponent(btn_aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -184,7 +271,17 @@ if(RB_4.isSelected()){
     private javax.swing.JRadioButton RB_2;
     private javax.swing.JRadioButton RB_3;
     private javax.swing.JRadioButton RB_4;
+    private javax.swing.JRadioButton RB_dividir;
+    private javax.swing.JRadioButton RB_multiplicar;
+    private javax.swing.JRadioButton RB_potencia;
+    private javax.swing.JRadioButton RB_resta;
+    private javax.swing.JRadioButton RB_sumar;
     private javax.swing.JButton btn_aceptar;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton ntn_calcular;
+    private javax.swing.JTextField num1;
+    private javax.swing.JTextField num2;
+    private javax.swing.JTextField resultado;
     // End of variables declaration//GEN-END:variables
 }
